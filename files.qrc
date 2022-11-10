@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>Минус.png</file>
+    <file>Плюс.png</file>
+    <file>равно.png</file>
+    <file>backspace_FILL0_wght400_GRAD0_opsz48.png</file>
+    <file>calculate_FILL0_wght400_GRAD0_opsz48.png</file>
+  </qresource>
+</RCC>
