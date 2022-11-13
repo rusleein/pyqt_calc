@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setFont(font)
         self.lineEdit.setStyleSheet("font-size:40px;\n"
                                     "border: none;")
-        self.lineEdit.setMaxLength(20)
+        self.lineEdit.setMaxLength(10)
         self.lineEdit.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.lineEdit.setReadOnly(True)
         self.lineEdit.setObjectName("lineEdit")
@@ -416,6 +416,8 @@ class Ui_MainWindow(object):
                                    "    color: #eba352\n"
                                    "}")
         self.btn_mul.setObjectName("btn_mul")
+        for sc in '*':
+            QShortcut(sc, self.btn_mul).activated.connect(self.btn_mul.animateClick)
         self.lay_btn.addWidget(self.btn_mul, 1, 3, 1, 1)
         self.btn_7 = QtWidgets.QPushButton(self.centralwidget)
         self.btn_7.setEnabled(True)

@@ -29,7 +29,6 @@ class Calc(QMainWindow):
         self.ui.setupUi(self)
         self.maxlen = self.ui.lineEdit.maxLength()
 
-
         QFontDatabase.addApplicationFont('E:\Downloads\San Francisco Pro Text\SF-Pro-Display-Light.otf')
 
         # Digits
@@ -94,7 +93,7 @@ class Calc(QMainWindow):
 
     def add_memory_label(self, sign: str):
         if not self.ui.label.text() or self.get_math_sigh_label() == '=':
-            self.ui.label.setText(self.del_zeros(self.ui.lineEdit.text()) + f' {sign}')
+            self.ui.label.setText(self.del_zeros(self.ui.lineEdit.text()) + f' {sign} ')
             self.adjust_label_font()
             self.ui.lineEdit.setText('0')
             self.adjust_enter_font()
@@ -257,6 +256,7 @@ class Calc(QMainWindow):
     def resizeEvent(self, event) -> None:
         self.adjust_enter_font()
         self.adjust_label_font()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
